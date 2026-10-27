@@ -8,8 +8,8 @@ import pytest
 import pymupdf
 
 from pathlib import Path
-from system.rag.ingestion import extract_pdf
-from system.models.documents import DocumentPage
+from system.rag.ingestion import extract_pdf, ingest_pdf
+from system.models.documents import Document, DocumentPage
 
 
 @pytest.fixture
@@ -68,3 +68,59 @@ def test_missing_pdf(tmp_path):
 
     with pytest.raises(FileNotFoundError):
         extract_pdf(missing_path)
+
+
+def test_ingest_pdf_constructs_document(sample_pdf):
+    """Verify PDF ingestion preserves metadata and extracted pages."""
+
+    document = ingest_pdf(
+        file_path=sample_pdf,
+        id="TEST-001",
+        title="Sample Eligibility Guide",
+        organization="Test Agency",
+        published_year=2026,
+        source_url="https://example.org/guide.pdf"
+    )
+
+    # Validate document object
+    assert isinstance(document, Document)
+
+    # Validate caller-supplied metadata
+    assert document.id == "TEST-001"
+    assert document.title == "Sample Eligibility Guide"
+    assert document.organization == "Test Agency"
+    assert document.published_year == 2026
+    assert document.source_url == "https://example.org/guide.pdf"
+
+    # Validate extracted pages
+    assert isinstance(document.pages, tuple)
+    assert len(document.pages) == 2
+
+    # Validate page numbering and text
+    assert document.pages[0].page_number == 1
+    assert document.pages[1].page_number == 2
+
+    assert "CalFresh provides food assistance." in document.pages[0].text
+    assert "Medi-Cal provides health coverage." in document.pages[1].text
+
+
+#TEST: Ingestion Output
+document = ingest_pdf(
+    file_path=Path("data/raw/Food_CalFresh_CalSAWS_Overview.docx"),
+    id="TEST-001",
+    title="Sample Eligibility Guide",
+    organization="Test Agency",
+    published_year=2026,
+    source_url=None
+)
+
+# Document metadata
+print("Document ID:", document.id)
+print("Title:", document.title)
+print("Organization:", document.organization)
+print("Total pages:", len(document.pages))
+
+# Extracted content
+for page in document.pages:
+    print(f"\n--- Page {page.page_number} ---")
+    print(page.text[:500])  # Preview first 500 characters
