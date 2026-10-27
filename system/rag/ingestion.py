@@ -1,7 +1,8 @@
 #Purpose: Load and extract text
 """
+File Name: ingestion.py
 Goals:
--read PDF files
+-read and extract PDF files
 -attach source metadata
 -reject unsupported files
 -return structured document objects
