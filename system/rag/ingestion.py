@@ -38,8 +38,14 @@ def extract_pdf(file_path: Path) -> tuple[DocumentPage,...]:
 
     return tuple(page_list)
 
-#TODO
-def ingest_pdf(file_path: Path) -> Document:
-    pass
 
+#Supllier-called meta data and automatic extracted detaisl
+def ingest_pdf(file_path: Path, id: str, title: str, organization: str, 
+               published_year: int | None , source_url: str | None) -> Document:
+    
+    #Extract pages and combined document object
+    extracted_pages = extract_pdf(file_path)
+    doc = Document(id, title, organization, published_year, source_url, extracted_pages)
+
+    return doc
 
