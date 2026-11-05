@@ -10,8 +10,8 @@ from dataclasses import dataclass
 
 @dataclass(frozen=True)
 class TextChunk:
-    id: int
-    document_id: int 
+    id: str #format: Document.id +str(DocumentPage.page_number) + generated list index
+    document_id: str
     page_number: int 
     text: str | None #provide searchable text for RAG which derived from DocumentPage.text
     chunk_index: int 
