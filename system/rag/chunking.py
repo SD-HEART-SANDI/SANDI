@@ -50,5 +50,28 @@ def chunk_document(document: Document) ->  tuple[TextChunk,...]:
 
     #Return tuple
     return tuple(chunks) #convert text list to tupe
-    
+
+
+#TODO
+def chunks_to_knowledge(document: Document, chunks: tuple[TextChunk,...]) -> list[KnowledgeItem]:
+
+    #Init
+    knowledge_list : list [KnowledgeItem] = [ ]
+
+    #Iterate through each chunks
+    for index, chunk in enumerate (chunks, start=0):
+        #Construct KnowledgeItem
+        knowledge_item = KnowledgeItem(
+            id=chunk.id,
+            name=document.title,
+            program=document.program,
+            category=document.category,
+            source=document.source_url,
+            summary=None,
+            text=chunk
+        ) 
+
+        knowledge_list.append(knowledge_item)
+
+    return knowledge_list
 
