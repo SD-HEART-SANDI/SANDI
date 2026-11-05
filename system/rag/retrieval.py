@@ -13,8 +13,6 @@ from system.config import settings
 from system.rag.embeddings import EmbeddingService
 from system.rag.vector_db import VectorDatabase
 
-
-
 class Retrieval: 
   #Dependency Injection
   def __init__(self, embedding_service: EmbeddingService, vector_db: VectorDatabase):

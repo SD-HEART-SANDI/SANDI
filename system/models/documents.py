@@ -9,9 +9,17 @@ Architecture Decision:
 from dataclasses import dataclass
 
 @dataclass(frozen=True)
+class TextChunk:
+    id: int
+    document_id: int 
+    page_number: int 
+    text: str | None #provide searchable text for RAG which derived from DocumentPage.text
+    chunk_index: int 
+
+@dataclass(frozen=True)
 class DocumentPage:
     page_number: int #page number of the document 
-    text: str | None #page content
+    text: str | None #page content: preserve extracted PDF page content by pynupdf
 
 @dataclass(frozen=True)
 class Document:
@@ -21,6 +29,8 @@ class Document:
     published_year: int | None #the year when document is published
     source_url: str | None #reference link to the source
     pages: tuple[DocumentPage] | None #tuple for immunutable individual document page
+
+
 
 
     
