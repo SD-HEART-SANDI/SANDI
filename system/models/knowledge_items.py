@@ -8,14 +8,16 @@ Architecture Decision:
 """
 
 from dataclasses import dataclass
+from system.models.documents import TextChunk
 
 @dataclass(frozen=True) 
 class KnowledgeItem:
-    id: str
-    name: str
+    id: str #chunk_id
+    name: str #program name
     program: str
     category: str
     source: str
-    summary: str
+    summary: str | None 
+    text: TextChunk | None 
 
     

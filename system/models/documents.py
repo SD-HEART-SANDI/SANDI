@@ -26,6 +26,8 @@ class Document:
     id: str # document identification
     title: str #title of the document
     organization: str # name of organization
+    program: str
+    category: str | None
     published_year: int | None #the year when document is published
     source_url: str | None #reference link to the source
     pages: tuple[DocumentPage] | None #tuple for immunutable individual document page

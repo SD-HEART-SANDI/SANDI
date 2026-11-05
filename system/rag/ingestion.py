@@ -39,7 +39,8 @@ def extract_pdf(file_path: Path) -> tuple[DocumentPage,...]:
     return tuple(page_list)
 
 
-#Supllier-called meta data and automatic extracted detaisl
+#Supllier-called meta data and automatic extracted detais
+#Database manager must call this function with JSON file to ingest new information into database
 def ingest_pdf(file_path: Path, id: str, title: str, organization: str, 
                published_year: int | None , source_url: str | None) -> Document:
     
