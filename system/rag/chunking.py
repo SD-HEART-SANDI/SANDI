@@ -7,3 +7,9 @@ Goals:
 Architecture Decision:
 Detail of ingestion pipeline to extract clear and managaeble segment/chunkss of pdfs
 """
+
+#Function Signature
+
+
+
+#Text Chunk Modelx
