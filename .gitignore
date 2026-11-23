@@ -5,3 +5,4 @@ __pycache__/
 .DS_Store
 data/vector_store/
 .pytest_cache/ 
+data/processed/
