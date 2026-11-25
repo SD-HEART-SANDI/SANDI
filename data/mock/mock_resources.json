@@ -1,0 +1,107 @@
+{
+  "note": "SYNTHETIC TEST DATA. All names, addresses, hours and links are made up. Not real services.",
+  "resources": [
+    {
+      "id": "food-001", "name": "Sample Community Kitchen", "category": "food",
+      "latitude": 32.7142, "longitude": -117.1563, "address": "100 Example St, San Diego, CA",
+      "hours": [
+        {"day": "mon", "opens": "11:00", "closes": "13:00"},
+        {"day": "wed", "opens": "11:00", "closes": "13:00"},
+        {"day": "fri", "opens": "11:00", "closes": "13:00"}
+      ],
+      "eligibility": "Anyone", "source": "https://example.org/kitchen", "last_verified": "2026-11-01"
+    },
+    {
+      "id": "food-002", "name": "Sample Food Pantry", "category": "food",
+      "latitude": 32.7075, "longitude": -117.1490, "address": "200 Example Ave, San Diego, CA",
+      "hours": [
+        {"day": "tue", "opens": "09:00", "closes": "12:00"},
+        {"day": "thu", "opens": "09:00", "closes": "12:00"}
+      ],
+      "eligibility": "San Diego County residents", "source": "https://example.org/pantry", "last_verified": "2026-10-15"
+    },
+    {
+      "id": "food-003", "name": "Sample Evening Meal Program", "category": "food",
+      "latitude": 32.7201, "longitude": -117.1612,
+      "hours": [{"day": "sun", "opens": "17:00", "closes": "19:00"}],
+      "eligibility": "Anyone", "source": "Sample Outreach Group", "last_verified": "2026-09-30"
+    },
+    {
+      "id": "shelter-001", "name": "Sample Overnight Shelter", "category": "shelter",
+      "latitude": 32.7068, "longitude": -117.1532, "address": "300 Example Blvd, San Diego, CA",
+      "hours": [
+        {"day": "mon", "opens": "18:00", "closes": "07:00"},
+        {"day": "tue", "opens": "18:00", "closes": "07:00"},
+        {"day": "wed", "opens": "18:00", "closes": "07:00"},
+        {"day": "thu", "opens": "18:00", "closes": "07:00"},
+        {"day": "fri", "opens": "18:00", "closes": "07:00"},
+        {"day": "sat", "opens": "18:00", "closes": "07:00"},
+        {"day": "sun", "opens": "18:00", "closes": "07:00"}
+      ],
+      "eligibility": "Adults 18 and older", "source": "https://example.org/shelter", "last_verified": "2026-11-10"
+    },
+    {
+      "id": "shelter-002", "name": "Sample Family Shelter", "category": "shelter",
+      "latitude": 32.7115, "longitude": -117.1425,
+      "hours": [],
+      "eligibility": "Families with children", "source": "https://example.org/family", "last_verified": "2026-08-20"
+    },
+    {
+      "id": "health-001", "name": "Sample Walk-In Clinic", "category": "health",
+      "latitude": 32.7180, "longitude": -117.1530, "address": "400 Example Way, San Diego, CA",
+      "hours": [
+        {"day": "mon", "opens": "08:00", "closes": "16:00"},
+        {"day": "tue", "opens": "08:00", "closes": "16:00"},
+        {"day": "wed", "opens": "08:00", "closes": "16:00"},
+        {"day": "thu", "opens": "08:00", "closes": "16:00"},
+        {"day": "fri", "opens": "08:00", "closes": "16:00"}
+      ],
+      "eligibility": "Anyone, with or without insurance", "source": "https://example.org/clinic", "last_verified": "2026-11-05"
+    },
+    {
+      "id": "health-002", "name": "Sample Mobile Health Van", "category": "health",
+      "latitude": 32.7095, "longitude": -117.1580,
+      "hours": [{"day": "sat", "opens": "10:00", "closes": "14:00"}],
+      "eligibility": "Anyone", "source": "Sample Health Partners", "last_verified": "2026-10-28"
+    },
+    {
+      "id": "hygiene-001", "name": "Sample Shower Station", "category": "hygiene",
+      "latitude": 32.7128, "longitude": -117.1470,
+      "hours": [
+        {"day": "mon", "opens": "07:00", "closes": "11:00"},
+        {"day": "thu", "opens": "07:00", "closes": "11:00"}
+      ],
+      "eligibility": "Anyone", "source": "https://example.org/showers", "last_verified": "2026-11-12"
+    },
+    {
+      "id": "hygiene-002", "name": "Sample Laundry Day", "category": "hygiene",
+      "latitude": 32.7160, "longitude": -117.1445,
+      "hours": [{"day": "wed", "opens": "09:00", "closes": "15:00"}],
+      "eligibility": "Adults 18 and older", "source": "https://example.org/laundry", "last_verified": "2026-07-14"
+    },
+    {
+      "id": "benefits-001", "name": "Sample Benefits Help Desk", "category": "benefits",
+      "latitude": 32.7190, "longitude": -117.1625, "address": "500 Example Plaza, San Diego, CA",
+      "hours": [
+        {"day": "mon", "opens": "08:30", "closes": "17:00"},
+        {"day": "tue", "opens": "08:30", "closes": "17:00"},
+        {"day": "wed", "opens": "08:30", "closes": "17:00"},
+        {"day": "thu", "opens": "08:30", "closes": "17:00"},
+        {"day": "fri", "opens": "08:30", "closes": "17:00"}
+      ],
+      "eligibility": "Anyone applying for CalFresh or Medi-Cal", "source": "https://example.org/benefits", "last_verified": "2026-11-18"
+    },
+    {
+      "id": "benefits-002", "name": "Sample ID Replacement Clinic", "category": "benefits",
+      "latitude": 32.7088, "longitude": -117.1605,
+      "hours": [{"day": "tue", "opens": "13:00", "closes": "16:00"}],
+      "eligibility": "Anyone who needs a replacement ID", "source": "Sample Legal Aid", "last_verified": "2026-10-02"
+    },
+    {
+      "id": "other-001", "name": "Sample Phone Charging Spot", "category": "other",
+      "latitude": 32.7135, "longitude": -117.1600,
+      "hours": [],
+      "eligibility": "Anyone", "source": "Sample Outreach Group", "last_verified": "2026-11-20"
+    }
+  ]
+}

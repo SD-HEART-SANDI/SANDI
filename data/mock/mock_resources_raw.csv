@@ -1,0 +1,13 @@
+id,name,category,latitude,longitude,address,hours,eligibility,source,last_verified
+food-101,Sample Lunch Program,food,32.7140,-117.1570,10 Example St,mon 11:00-13:00; thu 11:00-13:00,Anyone,https://example.org/lunch,2026-11-01
+shelter-101,Sample Night Shelter,shelter,32.7070,-117.1530,,mon 18:00-07:00; tue 18:00-07:00,Adults 18 and older,https://example.org/night,2026-11-10
+health-101,Sample Street Clinic,health,32.7185,-117.1535,20 Example Ave,wed 08:00-16:00,Anyone,Sample Health Partners,2026-10-20
+hygiene-101,Sample Shower Truck,hygiene,32.7125,-117.1475,,,Anyone,https://example.org/shower,2026-09-12
+benefits-101,Sample CalFresh Help,benefits,32.7195,-117.1620,30 Example Plaza,fri 09:00-12:00,Anyone applying for CalFresh,https://example.org/calfresh,2026-11-15
+other-101,Sample Mail Pickup,other,32.7100,-117.1590,,tue 10:00-14:00,Anyone,Sample Outreach Group,2026-10-05
+Food 102,Sample Bad ID,food,32.7150,-117.1550,,,Anyone,https://example.org/bad-id,2026-11-01
+food-103,Sample Wrong Place,food,40.7128,-74.0060,,,Anyone,https://example.org/nyc,2026-11-01
+food-104,Sample Missing Source,food,32.7160,-117.1500,,,Anyone,,2026-11-01
+shelter-102,Sample Bad Hours,shelter,32.7080,-117.1520,,monday 6pm to 7am,Anyone,https://example.org/hours,2026-11-01
+food-101,Sample Duplicate ID,food,32.7141,-117.1571,,,Anyone,https://example.org/dup,2026-11-01
+clinic-105,Sample Wrong Category,clinic,32.7170,-117.1560,,,Anyone,https://example.org/cat,2026-11-01
